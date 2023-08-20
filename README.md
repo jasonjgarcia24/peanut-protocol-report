@@ -35,7 +35,7 @@ $ FOUNDRY_PROFILE=peanut_v4 forge test
 
 <i>No impact due to the above finding for ERC1155 batch transfers.</i><br>
 
-Should the ERC1155 batch transfer issue be resolved in the previous finding, a batch transfer into this contract would forever lock up that asset within the contract. This is due to the fact that the `onERC1155BatchReceived()` function deposits the token(s) with a `_contractType` of `4`, and the `withdrawDeposit()` function would bypass all transfers and delete the deposit record.
+Within V3, should the ERC1155 batch transfer issue be resolved in the previous finding, a batch transfer into this contract would forever lock up that asset within the contract. This is due to the fact that the `onERC1155BatchReceived()` function deposits the token(s) with a `_contractType` of `4`, and the `withdrawDeposit()` function would bypass all transfers and delete the deposit record.
 
 ## Remedial Measures (V4)
 
