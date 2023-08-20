@@ -7,7 +7,7 @@ All code references below are for V4 unless specified otherwise.
 
 ## Finding #1-3
 
-Lines 235, 281, and 333 are incorrect and will result in an EVM error due to the restricted length of `_data` and `_pubKey20Bytes` being restricted to 20 bytes. Solidity's `abi.decode()` function expects a 32-byte encoded data set.<br>
+Lines 235, 281, and 333 are incorrect and will result in an EVM error due to the lengths of `_data` and `_pubKey20Bytes` being restricted to 20 bytes. Solidity's `abi.decode()` function expects a 32-byte encoded data set.<br>
 
 Therefore, all direct external transfers of ERC721 and ERC1155 tokens will fail for failing to implement their expected receiver.<br>
 
