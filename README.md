@@ -37,7 +37,7 @@ $ FOUNDRY_PROFILE=peanut_v4 forge test
 
 Within V3, should the ERC1155 batch transfer issue be resolved in the previous finding, a batch transfer into this contract would forever lock up that asset within the contract. This is due to the fact that the `onERC1155BatchReceived()` function deposits the token(s) with a `_contractType` of `4`, and the `withdrawDeposit()` function would bypass all transfers and delete the deposit record.
 
-## Remedial Measures (V4)
+## Remedial Measures
 
 To keep the same behavior use solidity's `abi.encode()` to maintain the same process flow and logic with minimal changes. This will pad the 20-bytes data to 32-bytes and not revert.<br>
 
