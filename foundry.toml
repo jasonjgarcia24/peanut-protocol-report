@@ -1,0 +1,18 @@
+[rpc_endpoints]
+local = "http://127.0.0.1:8545"
+
+[profile.peanut_v3]
+solc = "0.8.15"
+src = 'contracts_v3'
+out = 'out'
+test = 'test/test_v3'
+libs = ["lib"]
+remappings = []
+
+[profile.peanut_v4]
+solc = "0.8.20"
+src = 'contracts_v4'
+out = 'out'
+test = 'test/test_v4'
+libs = ["lib"]
+remappings = []

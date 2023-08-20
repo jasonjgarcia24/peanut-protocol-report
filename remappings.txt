@@ -1,0 +1,5 @@
+ds-test/=lib/forge-std/lib/ds-test/src/
+forge-std/=lib/forge-std/src/
+contracts_v3=contracts_v3/
+@openzeppelin=lib/openzeppelin-contracts/
+@helix-foundation=lib/currency/
