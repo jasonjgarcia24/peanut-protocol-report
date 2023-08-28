@@ -5,6 +5,14 @@ Finding 4 is only present in V3.<br>
 
 All code references below are for V4 unless specified otherwise.
 
+## Contracts Tested
+
+| Contract | Version | Address                                                                                                                           | Chain   |
+| -------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| PeanutV3 | V3      | [0xdB60C736A30C41D9df0081057Eae73C3eb119895](https://etherscan.io/address/0xdB60C736A30C41D9df0081057Eae73C3eb119895#code)        | Mainnet |
+| PeanutV3 | V3      | [0xd068b1F6F0623CbCC7ADC7545290f8991C9B8Ec9](https://goerli.etherscan.io/address/0xd068b1F6F0623CbCC7ADC7545290f8991C9B8Ec9#code) | Goerli  |
+| PeanutV4 | V4      | NA                                                                                                                                | NA      |
+
 ## Finding #1-3
 
 Lines 235, 281, and 333 are incorrect and will result in an EVM error due to the lengths of `_data` and `_pubKey20Bytes` being restricted to 20 bytes. Solidity's `abi.decode()` function expects a 32-byte encoded data set.<br>
